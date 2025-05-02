@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austino | Web Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+            overflow-x: hidden;
+        }
+        
+        .glow {
+            text-shadow: 0 0 10px rgba(239, 68, 68, 0.7);
+        }
+        
+        .red-gradient {
+            background: linear-gradient(135deg, #ef4444 0%, #7f1d1d 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(239, 68, 68, 0.3);
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .typing {
+            position: relative;
+        }
+        
+        .typing::after {
+            content: "|";
+            position: absolute;
+            right: -5px;
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Animated Background -->
+    <div class="fixed inset-0 -z-10 opacity-20">
+        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-30"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-black via-transparent to-black"></div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-12 md:py-24">
+        <!-- Hero Section -->
+        <section class="flex flex-col items-center justify-center min-h-[70vh] text-center">
+            <div class="relative mb-8">
+                <div class="absolute -inset-4 bg-red-600 rounded-full opacity-20 blur-lg"></div>
+                <div class="relative">
+                    <div class="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-red-600 to-red-900 flex items-center justify-center overflow-hidden border-4 border-red-600/50">
+                        <img src="https://source.boomplaymusic.com/group10/M00/12/30/7ccd40a49a304356bb23ebe24fb4fb50H3000W3000_320_320.jpg" alt="Austino" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 glow">
+                <span class="text-white">I'm </span>
+                <span class="text-red-500 typing">Austino</span>
+            </h1>
+            
+            <div class="relative">
+                <div class="absolute -inset-1 bg-red-600 rounded-lg opacity-20 blur"></div>
+                <div class="relative">
+                    <h2 class="text-xl md:text-2xl font-medium mb-6 text-red-400">
+                        Web Developer & Digital Creator
+                    </h2>
+                </div>
+            </div>
+            
+            <p class="max-w-2xl mx-auto text-gray-300 mb-8 text-lg">
+                Crafting beautiful, functional websites that deliver results. 
+                Let's turn your ideas into digital reality.
+            </p>
+            
+            <div class="flex gap-4">
+                <a href="https://discord.com/users/austinolll" 
+                   class="px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+                    <i class="fab fa-discord"></i> @austinolll
+                </a>
+            </div>
+            
+            <div class="mt-12 animate-bounce">
+                <a href="#about" class="text-red-400">
+                    <i class="fas fa-chevron-down text-2xl"></i>
+                </a>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="py-20">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+                    <span class="text-red-500">About</span> Me
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-red-600 rounded-xl opacity-10 blur-lg"></div>
+                        <div class="relative bg-black/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 h-full">
+                            <h3 class="text-xl font-semibold mb-4 text-red-400">Who I Am</h3>
+                            <p class="text-gray-300 mb-4">
+                                Hi, I'm Austino - a passionate web developer with expertise in creating modern, responsive websites and web applications. I combine technical skills with creative vision to build digital experiences that users love.
+                            </p>
+                            <p class="text-gray-300">
+                                When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or helping others learn web development.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-black/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 card-hover">
+                                <div class="text-red-500 mb-2">
+                                    <i class="fas fa-code text-2xl"></i>
+                                </div>
+                                <h3 class="font-semibold mb-2">Web Development</h3>
+                                <p class="text-sm text-gray-400">
+                                    Building responsive, performant websites with modern technologies.
+                                </p>
+                            </div>
+                            <div class="bg-black/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 card-hover">
+                                <div class="text-red-500 mb-2">
+                                    <i class="fas fa-mobile-alt text-2xl"></i>
+                                </div>
+                                <h3 class="font-semibold mb-2">UI/UX Design</h3>
+                                <p class="text-sm text-gray-400">
+                                    Creating intuitive interfaces with exceptional user experience.
+                                </p>
+                            </div>
+                            <div class="bg-black/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 card-hover">
+                                <div class="text-red-500 mb-2">
+                                    <i class="fas fa-bolt text-2xl"></i>
+                                </div>
+                                <h3 class="font-semibold mb-2">Performance</h3>
+                                <p class="text-sm text-gray-400">
+                                    Optimized solutions that load fast and run smoothly.
+                                </p>
+                            </div>
+                            <div class="bg-black/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 card-hover">
+                                <div class="text-red-500 mb-2">
+                                    <i class="fas fa-server text-2xl"></i>
+                                </div>
+                                <h3 class="font-semibold mb-2">Backend</h3>
+                                <p class="text-sm text-gray-400">
+                                    Robust server-side solutions and database architecture.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Skills Section -->
+        <section class="py-12 bg-black/30 backdrop-blur-sm border-y border-gray-800">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+                    My <span class="text-red-500">Skills</span>
+                </h2>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 rounded-full bg-red-900/30 flex items-center justify-center mb-2 border border-red-900/50">
+                            <i class="fab fa-html5 text-red-500 text-2xl"></i>
+                        </div>
+                        <span class="text-gray-300">HTML5</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 rounded-full bg-red-900/30 flex items-center justify-center mb-2 border border-red-900/50">
+                            <i class="fab fa-js text-red-500 text-2xl"></i>
+                        </div>
+                        <span class="text-gray-300">JavaScript</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 rounded-full bg-red-900/30 flex items-center justify-center mb-2 border border-red-900/50">
+                            <i class="fab fa-node-js text-red-500 text-2xl"></i>
+                        </div>
+                        <span class="text-gray-300">Node.js</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 rounded-full bg-red-900/30 flex items-center justify-center mb-2 border border-red-900/50">
+                            <i class="fab fa-git-alt text-red-500 text-2xl"></i>
+                        </div>
+                        <span class="text-gray-300">Git</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 rounded-full bg-red-900/30 flex items-center justify-center mb-2 border border-red-900/50">
+                            <i class="fab fa-figma text-red-500 text-2xl"></i>
+                        </div>
+                        <span class="text-gray-300">Figma</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="py-20">
+            <div class="max-w-4xl mx-auto bg-gradient-to-r from-red-900/30 to-black/30 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden">
+                <div class="absolute -inset-1 bg-red-600 rounded-xl opacity-10 blur-3xl"></div>
+                <div class="relative">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                        Ready to <span class="text-red-500">work together</span>?
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                        Have a project in mind or want to discuss potential opportunities? I'd love to hear from you!
+                    </p>
+                    <a href="https://discord.com/users/austinolll" 
+                       class="inline-flex items-center px-8 py-4 bg-red-600 hover:bg-red-700 text-white rounded-lg font-bold transition-all duration-300 transform hover:scale-105 pulse">
+                        <i class="fab fa-discord mr-3"></i> @austinolll on Discord
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-black/50 backdrop-blur-sm border-t border-gray-800 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">A</span>
+                        </div>
+                        <span class="text-xl font-bold text-white">Austino</span>
+                    </div>
+                </div>
+                
+                <div class="flex space-x-6 mb-4 md:mb-0">
+                    <a href="#" class="text-gray-400 hover:text-red-500 transition-colors">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-red-500 transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-red-500 transition-colors">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-red-500 transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+                
+                <div class="text-gray-500 text-sm">
+                    &copy; 2023 Austino. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Typing animation
+        const words = ["Austino", "a Developer", "a Designer", "a Creator"];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let isEnd = false;
+        
+        const typeEffect = () => {
+            const currentWord = words[wordIndex];
+            const currentChar = currentWord.substring(0, charIndex);
+            const typingElement = document.querySelector('.typing');
+            
+            typingElement.textContent = currentChar;
+            
+            if (!isDeleting && charIndex < currentWord.length) {
+                charIndex++;
+                setTimeout(typeEffect, 100);
+            } else if (isDeleting && charIndex > 0) {
+                charIndex--;
+                setTimeout(typeEffect, 50);
+            } else {
+                isDeleting = !isDeleting;
+                if (!isDeleting) {
+                    wordIndex = (wordIndex + 1) % words.length;
+                }
+                setTimeout(typeEffect, 1000);
+            }
+        };
+        
+        // Initialize the typing effect
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(typeEffect, 1000);
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
